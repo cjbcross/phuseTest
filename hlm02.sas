@@ -13,6 +13,7 @@
 
 TITLE Example of random nested effects, AKA hierarchical linear models;
 TITLE2 'leaf morphometrics';
+TITLE3 'Sample SAS Git file for PhUSE CSS';
 
 DATA leaves;
    LENGTH climate $9;
@@ -65,7 +66,7 @@ PROC GLM DATA=leaves;
    MODEL ovalish = climate location(climate);
    RUN;
    * - now treat location(climate) as a random variable;
-   TITLE3 Note how the climate effect is no longer significant;
+   TITLE4 Nothing to see here;
    RANDOM location(climate)  / TEST;
    MEANS climate location(climate);
 RUN;
