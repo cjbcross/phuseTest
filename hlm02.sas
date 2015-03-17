@@ -66,7 +66,7 @@ PROC GLM DATA=leaves;
    MODEL ovalish = climate location(climate);
    RUN;
    * - now treat location(climate) as a random variable;
-   TITLE4 Note how the climate effect is no longer significant;
+   TITLE4 Nothing to see here;
    RANDOM location(climate)  / TEST;
    MEANS climate location(climate);
 RUN;
